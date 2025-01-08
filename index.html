@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book an Appointment</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class = "container-form">
+                <a href="/" class="velci-link">
+                    VelciPet
+                </a>
+                <nav class="nav">
+                    <a href="/" class="home">Home</a>
+                    <a href="/" class="about-us">About Us</a>
+                    <a href="/" class="services">Services</a>
+                    <a href="/" class="contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <h2 class="heading-yellow">Make an Appointment</h2>
+
+        <form id="appointmentForm">
+            <div class="section">
+                <div class="form-field">
+                    <p>Name</p>
+                    <input type="text" placeholder="Name">
+                </div>
+            
+                <div class="form-field">
+                    <p>Pet Name</p>
+                    <input type="text" placeholder="Pet Name">
+                </div>
+            </div>
+            <div class="section">
+                <div class="form-field">
+                    <p>Pet Type</p>
+                    <select id="petType" name="petType" required>
+                        <option value="" disabled selected>Select a pet type</option>
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <p>Service Requested</p>
+                    <select id="petType" name="petType" required>
+                        <option value="" disabled selected>Select service</option>
+                        <option value="preventative-care">Preventative Care</option>
+                        <option value="surgery">Surgery</option>
+                        <option value="emergency">Emergency</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section">
+                <div class="form-field" id = "contact">
+                    <p>Contact Info</p>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                    <br><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                    <small>Format: 123-456-7890 required</small>
+                    <br><br>
+                </div>
+                
+                <div class="form-field">
+                    <p>Preferred Appointment Time</p>
+                    <input type="datetime-local" >
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
